@@ -9,7 +9,7 @@ import {
  } from 'react-native';
  import {images,COLORS,SIZES,FONTS} from '../constants';
  import { LinearGradient } from 'expo-linear-gradient';
-
+ import {customButton} from "../components";
 function Landing({navigation}) {
     function renderHeader(){
         return(
@@ -68,6 +68,22 @@ function Landing({navigation}) {
                 }}>
                     En güzel tarifleri keşfet ve deneme şansı yakala...
                 </Text>
+                <View
+                style={{
+                    flex:1,
+                    justifyContent:'center'
+                }}>
+                    <customButton
+                    buttonText="Giriş yap"
+                    color={[COLORS.darkGreen,COLORS.lime]}
+                    onPress={()=>navigation.replace("Home")}
+                    />
+                    <customButton
+                    buttonText="Üye ol"
+                    color={[]}
+                    onPress={()=>navigation.replace("Home")}
+                    />
+                </View>
             </View>
 
         )
