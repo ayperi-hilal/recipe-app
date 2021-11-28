@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Tabs from "./navigation/tabs";
 import Landing from './screens/Landing';
 import Home from './screens/Home';
+import Profile from './screens/Profile';
 
 const Stack = createStackNavigator();
 
@@ -26,8 +27,8 @@ const App = () => {
                     component={Tabs}
                 />
                 <Stack.Screen
-                    name="Recipe"
-                    component={Home}
+                    name="Profile"
+                    component={Profile}
                 />
             </Stack.Navigator>
         </NavigationContainer>
