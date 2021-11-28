@@ -88,7 +88,7 @@ function Landing({navigation}) {
                     }}
                     buttonText="Giriş yap"
                     color={['#229879','#2AD699']}
-                    onPress={()=>navigation.replace("Home")}
+                    onPress={()=>navigation.replace("Login")}
                     />
                     <CustomButton
                     buttonContainerStyle={{
@@ -100,7 +100,7 @@ function Landing({navigation}) {
                     }}
                     buttonText="Üye ol"
                     color={[]}
-                    onPress={()=>navigation.replace("Home")}
+                    onPress={()=>navigation.replace("SignUp")}
                     />
                 </View>
             </View>

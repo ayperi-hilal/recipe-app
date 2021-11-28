@@ -11,7 +11,7 @@ import {
 
 import {FONTS,COLORS,icons,images,dummyData} from '../constants';
 
-const HomeScreen = ({ navigation }) => {
+const Home = ({ navigation }) => {
     return (
         <SafeAreaView
         style={{
@@ -24,4 +24,4 @@ const HomeScreen = ({ navigation }) => {
     )
 }
 
-export default HomeScreen;
+export default Home;
