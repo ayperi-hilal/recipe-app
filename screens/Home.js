@@ -2,26 +2,26 @@ import React from 'react';
 import {
     View,
     Text,
-    TouchableOpacity
+    Image,
+    SafeAreaView,
+    TouchableOpacity,
+    TextInput,
+    FlatList
 } from 'react-native';
 
-const Home = ({ navigation }) => {
+import {FONTS,COLORS,icons,images,dummyData} from '../constants';
+
+const HomeScreen = ({ navigation }) => {
     return (
-        <View
-            style={{
-                flex: 1,
-                alignItems: 'center',
-                justifyContent: 'center'
-            }}
-        >
-            <Text>Home</Text>
-            <TouchableOpacity
-                onPress={() => navigation.navigate("Recipe")}
-            >
-                <Text>Navigate to Recipe</Text>
-            </TouchableOpacity>
-        </View>
+        <SafeAreaView
+        style={{
+            flex:1,
+            backgroundColor:COLORS.white
+        }}>
+            <FlatList
+            />
+        </SafeAreaView>
     )
 }
 
-export default Home;
+export default HomeScreen;

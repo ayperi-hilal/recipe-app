@@ -5,8 +5,9 @@ import {
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 
 import Home from "../screens/Home";
-
-
+import Profile from "../screens/Profile";
+import Bookmark from "../screens/Bookmark";
+import Search from "../screens/Search";
 
 const Tab = createBottomTabNavigator()
 
@@ -18,16 +19,16 @@ const Tabs = () => {
                 component={Home}
             />
             <Tab.Screen
-                name="Landing"
-                component={Home}
+                name="Search"
+                component={Search}
             />
             <Tab.Screen
                 name="Bookmark"
-                component={Home}
+                component={Bookmark}
             />
             <Tab.Screen
-                name="Settings"
-                component={Home}
+                name="Profile"
+                component={Profile}
             />
         </Tab.Navigator>
     )
