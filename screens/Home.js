@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState,useEffect } from "react";
 import {
     View,
     Text,
@@ -8,23 +8,30 @@ import {
     TextInput,
     FlatList
 } from 'react-native';
-//API CALL
-import {COLORS,SIZES,} from '../constants';
+import MealList from "../components/MealList";
 
-const Home = ({ navigation }) => {
-    return (
-        // <SafeAreaView
-        // style={{
-        //     flex:1,
-        //     backgroundColor:COLORS.white
-        // }}>
-        //     <FlatList
-        //     />
-        // </SafeAreaView>
-        <View>
-            <Text>HOME </Text>
-        </View>
-    )
+function Home() {
+  const [mealData, setMealData] = useState();
+
+  useEffect(() => {
+    fetchMyMeals();
+  }, []);
+
+  const fetchMyMeals = async () => {
+    const response = await fetch("https://api.spoonacular.com/recipes/complexSearch?query=pasta&number=100&apiKey=b2209320ab644d0aad6edaa62c1894a1");
+    const json = await response.json();
+
+    setMealData(json.results);
+    
+  };
+
+  if(!mealData) return <Text>Loading....</Text>
+  
+  return (
+    <SafeAreaView>
+      {mealData && <MealList mealData={mealData} />}
+    </SafeAreaView>
+  );
 }
 
 export default Home;
