@@ -8,19 +8,22 @@ import {
     TextInput,
     FlatList
 } from 'react-native';
-
-import {COLORS} from '../constants';
+//API CALL
+import {COLORS,SIZES,} from '../constants';
 
 const Home = ({ navigation }) => {
     return (
-        <SafeAreaView
-        style={{
-            flex:1,
-            backgroundColor:COLORS.white
-        }}>
-            <FlatList
-            />
-        </SafeAreaView>
+        // <SafeAreaView
+        // style={{
+        //     flex:1,
+        //     backgroundColor:COLORS.white
+        // }}>
+        //     <FlatList
+        //     />
+        // </SafeAreaView>
+        <View>
+            <Text>HOME </Text>
+        </View>
     )
 }
 

@@ -5,7 +5,7 @@ const search = require("../assets/icons/search.png")
 const settings = require("../assets/icons/settings.png")
 const back = require("../assets/icons/back.png")
 const rightArrow = require("../assets/icons/right-arrow.png")
-
+const user = require("../assets/icons/user.png")
 
 export default {
     bookmark,
@@ -15,4 +15,5 @@ export default {
     search,
     settings,
     rightArrow,
+    user
 }

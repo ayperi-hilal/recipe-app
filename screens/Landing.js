@@ -1,6 +1,4 @@
 import React from 'react';
-import { Dimensions } from "react-native";
-const { width, height } = Dimensions.get("window");
 import { 
     StyleSheet,
     Text, 
@@ -10,13 +8,10 @@ import {
     StatusBar
  } from 'react-native';
 
- const SIZES = {
-    width,
-    height
-};
+import {images,SIZES} from '../constants';
 import { LinearGradient } from 'expo-linear-gradient';
 import CustomButton from '../components/CustomButton';
-const image = { uri: 'https://www.pizzaoriginale.com.pk/wp-content/uploads/2020/08/chad-MqT0asuoIcU-unsplash-scaled.jpg' };
+
 
 function Landing({navigation}) {
     function renderHeader(){
@@ -26,7 +21,7 @@ function Landing({navigation}) {
                 height: SIZES.height > 700 ? "65%" : "60%"
             }}>
                 <ImageBackground 
-                source={image}
+                source={images.loginBackground}
                 style={{
                     flex:1,
                     justifyContent:'flex-end'

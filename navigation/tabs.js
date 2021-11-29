@@ -63,7 +63,7 @@ const Tabs = () => {
                 options={{
                     tabBarIcon: ({focused})=> <TabIcon 
                     focused={focused}
-                    icon={icons.settings}/>
+                    icon={icons.user}/>
                 }}
             />
         </Tab.Navigator>
