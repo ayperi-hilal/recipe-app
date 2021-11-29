@@ -9,6 +9,8 @@ import {
     FlatList
 } from 'react-native';
 
+import CustomButton from './CustomButton';
+
 export default function Meal({ meal }) {
   const [imageUrl, setImageUrl] = useState("");
 
@@ -31,7 +33,18 @@ export default function Meal({ meal }) {
       <Image src={imageUrl} alt="recipe" />
         <FlatList>Preparation time: {meal.readyInMinutes} minutes</FlatList>
         <FlatList>Number of servings: {meal.servings}</FlatList>
-
+        <CustomButton
+                    buttonContainerStyle={{
+                        marginTop:8,
+                        paddingVertical:10,
+                        borderRadius:18,
+                        borderColor:'#1A8871',
+                        borderWidth:1
+                    }}
+                    buttonText="Üye ol"
+                    color={[]}
+                    onPress={meal.sourceUrl}
+                    />
       {/* <a href={meal.sourceUrl}>Go to Recipe</a> */}
     </Text>
   );
