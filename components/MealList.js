@@ -14,10 +14,10 @@ import Meal from "./Meal";
 export default function MealList({ mealData }) {
 
   return (
-      <FlatList>
+      <SafeAreaView>
         {mealData.map((meal) => {
           return <Meal key={meal.id} meal={meal} />;
         })}
-      </FlatList>
+      </SafeAreaView>
   );
 }

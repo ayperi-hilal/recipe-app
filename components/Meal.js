@@ -29,8 +29,14 @@ export default function Meal({ meal }) {
 
   return (
     <Text>
+      <Image source={{uri:imageUrl}} alt="recipe" 
+      resizeMode='cover'
+      style={{
+        width:100,
+        height:100,
+        borderRadius:10,
+      }}/>
       <Text h1>{meal.title}</Text>
-      <Image src={imageUrl} alt="recipe" />
         <FlatList>Preparation time: {meal.readyInMinutes} minutes</FlatList>
         <FlatList>Number of servings: {meal.servings}</FlatList>
         <CustomButton
@@ -41,7 +47,7 @@ export default function Meal({ meal }) {
                         borderColor:'#1A8871',
                         borderWidth:1
                     }}
-                    buttonText="Üye ol"
+                    buttonText="Tarife Git"
                     color={[]}
                     onPress={meal.sourceUrl}
                     />
